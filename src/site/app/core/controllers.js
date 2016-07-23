@@ -1,3 +1,3 @@
 export default ngModule => {
-  require('./main/nav/nav')(ngModule);
+  require('./main/controller')(ngModule);
 };
