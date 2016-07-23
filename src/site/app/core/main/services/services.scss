@@ -1,0 +1,16 @@
+@import '../../css/functions';
+@import '../../css/colors';
+
+#services{
+  color: $dark-grey;
+  ul.services-list{
+    padding: 0;
+    li{
+      list-style: none;
+      margin-top: 4px;
+    }
+  }
+  .actions{
+    margin-top: 5%;
+  }
+}

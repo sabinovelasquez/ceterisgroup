@@ -1,0 +1,14 @@
+@import '../../css/functions';
+@import '../../css/colors';
+
+#about{
+  color: white;
+  background: $orange;
+  .logo-v{
+    width: 50%;
+    height: 200px;
+    margin: 10px 25%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

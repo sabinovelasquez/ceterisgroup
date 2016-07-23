@@ -1,4 +1,14 @@
+@import '../../css/functions';
+@import '../../css/colors';
+
 header{
   min-height: 420px;
   background-size: cover!important;
+  .info{
+    margin-top:5%;
+    color: white;
+    p{
+      font-size: 1.2em;
+    }
+  }
 }

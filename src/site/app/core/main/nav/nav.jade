@@ -9,11 +9,11 @@
         .navbar-brand.pull-left.hidden-sm.hidden-md.hidden-lg
       .collapse.navbar-collapse(ng-class='{"in":navCollapsed}')
         ul.nav.navbar-nav
-          li.btn-group
-            a Quiénes Somos
-          li.btn-group
-            a Servicios
-          li.btn-group
+          li
+            a(du-smooth-scroll, duration='800', href='#services') Servicios
+          li 
+            a(du-smooth-scroll, duration='800', href='#about') Quiénes Somos
+          li
             a Covertura
-          li.btn-group
+          li
             a Contacto
