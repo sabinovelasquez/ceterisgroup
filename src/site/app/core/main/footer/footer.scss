@@ -2,5 +2,36 @@
 @import '../../css/colors';
 
 footer{
+  color: white;
   border-top: 5px solid darken($dark-grey, 5);
+  h4{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+  }
+  ul{
+    padding: 0;
+    li{
+      font-size: .9em;
+      list-style: none;
+      a{
+        cursor: pointer;
+        color: white;
+        &:hover{
+          text-decoration: none;
+          color: $orange;
+        }
+      }
+    }
+  }
+  .text-bottom{
+    margin-top: 50px;
+  }
+  .logo-h{
+    width: 200px;
+    height: 56px;
+  }
+  small{
+    font-size: 11px;
+  }
 }
