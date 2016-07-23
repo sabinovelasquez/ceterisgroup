@@ -1,7 +1,7 @@
 {
-  "name": "photo-portfolio",
+  "name": "ceteris-group",
   "version": "1.0.0",
-  "description": "Photo Portfolio / Angular Front-end Application",
+  "description": "Ceteris Group Site",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --content-base app --hot",

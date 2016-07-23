@@ -18,6 +18,11 @@ footer{
   float: left;
   width: 100%;
   padding: 20px 0 0;
+  min-height: 400px;
+  background: $dark-grey;
+}
+strong{
+  color: $orange;
 }
 a.ceterisbtn{
   @include transition(background .2s ease, border .2s ease, color .2s ease);
@@ -43,8 +48,8 @@ a.ceterisbtn{
     border: 1px solid $dark-grey;
   }
   &:hover{
-    color: white;
     text-decoration: none;
+    color: white;
     background: $orange;
     &.dark{
       border: 1px solid $orange;

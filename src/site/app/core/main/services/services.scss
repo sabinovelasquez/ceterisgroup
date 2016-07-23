@@ -6,11 +6,20 @@
   ul.services-list{
     padding: 0;
     li{
-      list-style: none;
       margin-top: 4px;
+      list-style: none;
     }
   }
   .actions{
+    position: relative;
+    left: 50%;
+    float: left;
     margin-top: 5%;
+    margin-left: -110px;
+    @media(min-width:768px){
+      left: 0;
+      float: right;
+      margin-left: 0;
+    }
   }
 }
