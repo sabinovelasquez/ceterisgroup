@@ -1,0 +1,67 @@
+@import '../../css/functions';
+@import '../../css/colors';
+$nbh: 76px;
+
+.menu{
+  font-family: 'Cinzel', serif;
+  .mob-menu{
+    width: 76px;
+    height: 76px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    background: darken($dark-grey, 5);
+    &:focus{
+background: darken($dark-grey, 5);
+    }
+    &:hover{
+      background: $orange;
+      color:white;
+    }
+  }
+  .navbar-brand{
+    height: $nbh;
+  }
+  .logo-h{
+    width: 180px;
+    height: 50px;
+    background-repeat: no-repeat;
+  }
+  .navbar-collapse{
+    background: $dark-grey;
+  }
+  .navbar{
+    height: $nbh;
+    border: none;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    background: $dark-grey;
+    li{
+      a{
+        line-height: $nbh;
+        padding: 0 15px;
+        cursor: pointer;
+        text-align: center;
+        color: white;
+        &:hover,
+        &:focus{
+          opacity: .8;
+          color: white;
+          &::before{
+            position: absolute;
+            top: 50px;
+            left: 5%;
+            width: 90%;
+            height: 2px;
+            content: '';
+            background: $orange;
+          }
+        }
+      }
+    }
+  }
+}
