@@ -3,6 +3,7 @@ module.exports = () => {
   require('angular-ui-bootstrap/dist/ui-bootstrap-csp.css');
   require('animate.css/animate.css');
   require('../index.scss');
+  require('./main/login/login-modal.scss');
 
   require('angular');
   require('angular-animate');

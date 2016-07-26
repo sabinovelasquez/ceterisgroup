@@ -47,7 +47,7 @@ a.ceterisbtn{
     color: $dark-grey;
     border: 1px solid $dark-grey;
   }
-  &:hover{
+  &:hover, &:focus, &:active{
     text-decoration: none;
     color: white;
     background: $orange;
