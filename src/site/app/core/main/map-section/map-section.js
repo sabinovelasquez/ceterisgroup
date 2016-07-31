@@ -7,6 +7,7 @@ export default ngModule => {
       scope: {},
       controllerAs: 'map',
       controller: function mapSectionCtrl() {
+        this.googleMapsUrl = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAW6F-ZiyoqA4YCZ99-s9DU-OEuUxHvaU8';
         this.mapCenter = '-33.4506266,-70.6836916';
         this.mapStyle = [{
           'featureType': 'administrative',
