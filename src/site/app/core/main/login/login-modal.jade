@@ -2,5 +2,23 @@
   a.close(ng-click='modal.close()')
     i.fa.fa-close
 .modal-body
-
+  form(ng-submit='modal.submit()')
+    .col-sm-6
+      .form-group
+        label
+          | Usuario
+        input.form-control(type='text', ng-model='modal.user.username')
+    .col-sm-6
+      .form-group
+        label
+          | Nombre
+        input.form-control(type='text', ng-model='modal.user.name')
+    .col-sm-6
+      .form-group
+        label
+          | Apellido
+        input.form-control(type='text', ng-model='modal.user.lastname')
+    input(type='submit', value='enviar')
+  //- a(ng-click='modal.storeUser()')
+  //-   | check
 .modal-footer

@@ -7,6 +7,7 @@ const ngModule = angular.module('app', [
   'ngResource',
   'ngSanitize',
   'ngTouch',
+  'firebase',
   'ui.bootstrap',
   'ui.router',
   'ngMap',

@@ -1,7 +1,7 @@
 export default ngModule => {
   require('./header.scss');
 
-  ngModule.directive('mainHeader', function mainHeader($uibModal) {
+  ngModule.directive('mainHeader', function mainHeader($uibModal, UsersAPIService) {
     return {
       template: require('./header.jade'),
       scope: {},
@@ -15,6 +15,20 @@ export default ngModule => {
             size: 'lg',
             controllerAs: 'modal',
             controller: function ModalCtrl($uibModalInstance) {
+              // const user = {};
+              // const username = 'sabino';
+              // user.name = 'Sabino';
+              // user.lastname = 'Velásquez';
+              // user.email = 'sabinovelasquez@gmail.com';
+              // user.comuna = 'Providencia';
+              // user.phone = '+56968406912';
+              // user.verified = false;
+              this.submit = () => {
+                console.log(this.user);
+              }
+              // this.storeUser = () => {
+              //   UsersAPIService.storeUser(user, username);
+              // };
               this.close = () => $uibModalInstance.dismiss();
             },
           });

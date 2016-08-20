@@ -12,6 +12,8 @@ module.exports = () => {
   require('angular-scroll');
   require('angular-ui-router');
   require('angular-ui-bootstrap');
+  require('firebase');
+  require('angularfire');
   require('ngtouch');
   require('ng-parallax');
   require('font-awesome-webpack');
