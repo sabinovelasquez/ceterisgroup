@@ -7,17 +7,38 @@
     .row
       h2.text-center
         | Contacto
-      .col-sm-12
-        form(ng-submit='contact.submit()')
+      
+      form(name='contactForm', ng-submit='contact.submit(contactForm.$valid)')
+        .col-sm-6
           .form-group
             label
-              | Usuario
-            input.form-control(type='text', ng-model='contact.name')
+              | Nombre {{contact.data.name}}
+            input.form-control(type='text', ng-model='contact.data.name', required)
           .form-group
             label
-              | Contraseña
-            input.form-control(type='password', ng-model='contact.user.password')
-          .col-sm-12
-            input.submit.ceterisbtn.dark(type='submit', value='Ingresar', ng-disabled='contact.loading')
-          .col-sm-12
-          i.fa.fa-refresh.fa-spin(ng-if='contact.loading')
+              | Email
+            input.form-control(type='email', ng-model='contact.data.email', required)
+          .form-group
+            label
+              | Confirme Email
+            input.form-control(type='email', ng-model='contact.data.email2', required)
+          .form-group
+            label
+              | Teléfono de contacto
+            .input-group
+              span.input-group-addon +56 9
+              input.form-control(type='number', ng-model='contact.data.phone', required)
+        .col-sm-6
+          .form-group
+            label
+              | Asunto (Opcional)
+            input.form-control(type='text', ng-model='contact.data.subject')
+        .col-sm-6
+          .form-group
+            label
+              | Mensaje
+            textarea.form-control(rows='8', ng-model='contact.data.body', required)
+        .col-sm-12
+          input.submit.ceterisbtn.dark(type='submit', value='Enviar', ng-disabled='contact.loading')
+        .col-sm-12
+        i.fa.fa-refresh.fa-spin(ng-if='contact.loading')

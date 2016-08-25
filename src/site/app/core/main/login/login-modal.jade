@@ -25,7 +25,9 @@
           p
             | El usuario no existe o no ha sido activado.
           p
-            | Por favor contacte a un ejecutivo.
+            | Por favor 
+            a(ng-click='modal.contactForm()')
+              | contacte a un ejecutivo.
     //- a(ng-click='modal.storeUser()')
     //-   | check
   //- .modal-footer

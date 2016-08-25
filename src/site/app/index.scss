@@ -13,7 +13,13 @@ html{
   font-weight: 300;
   height: 100%;
 }
-
+a{
+  cursor: pointer;
+  color: $orange;
+  &:hover{
+    color: $orange;
+  }
+}
 .glyphicon{
   font-family: 'FontAwesome';
   font-weight: normal;

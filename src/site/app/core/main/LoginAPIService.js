@@ -1,6 +1,6 @@
 export default ngModule => {
   require('./login/login-modal.scss');
-  ngModule.service('LoginAPIService', function LoginAPIService(UsersAPIService, $uibModal, $timeout) {
+  ngModule.service('LoginAPIService', function LoginAPIService(ContactAPIService, UsersAPIService, $uibModal, $timeout) {
     this.openLogin = () => {
       $uibModal.open({
         animation: true,
@@ -32,6 +32,11 @@ export default ngModule => {
           // this.storeUser = () => {
           //   UsersAPIService.storeUser(user, username);
           // };
+          this.contactForm = () => {
+            ContactAPIService.openForm();
+            $uibModalInstance.dismiss();
+            this.loading = false;
+          };
           this.close = () => {
             $uibModalInstance.dismiss();
             this.loading = false;
