@@ -7,24 +7,30 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic);
 
 
-body, html{
+body,
+html{
   font-family: 'Open Sans', sans-serif;
-  height: 100%;
   font-weight: 300;
+  height: 100%;
 }
 
-.glyphicon {
-    display: inline-block;
-    font-family: 'FontAwesome';
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+.glyphicon{
+  font-family: 'FontAwesome';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  display: inline-block;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-.glyphicon-chevron-left:before {
-  content: "\f053";
+.glyphicon-chevron-left:before{
+  content: '\f053';
 }
-.glyphicon-chevron-right:before {
-  content: "\f054";
+.glyphicon-chevron-right:before{
+  content: '\f054';
+}
+
+.modal-content{
+  border-radius: 0;
 }

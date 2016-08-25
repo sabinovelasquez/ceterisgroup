@@ -1,0 +1,23 @@
+@import '../../css/functions';
+@import '../../css/colors';
+
+#login{
+  .modal-header{
+    background: $orange;
+    .logo-h{
+      position: absolute;
+      top: 8px;
+      left: 20px;
+      width: 120px;
+      height: 40px;
+      background-repeat: no-repeat;
+    }
+  }
+  input.submit{
+    display: block;
+    margin: 20px auto 10px;
+  }
+  .contact{
+    font-weight: 400;
+  }
+}

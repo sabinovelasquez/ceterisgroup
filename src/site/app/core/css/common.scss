@@ -17,14 +17,15 @@ section{
 footer{
   float: left;
   width: 100%;
-  padding: 60px 0 0;
   min-height: 330px;
+  padding: 60px 0 0;
   background: $dark-grey;
 }
 strong{
   color: $orange;
 }
-a.ceterisbtn{
+a.ceterisbtn,
+input.ceterisbtn{
   @include transition(background .2s ease, border .2s ease, color .2s ease);
 
   font-family: 'Cinzel', serif;
@@ -46,8 +47,15 @@ a.ceterisbtn{
   &.dark{
     color: $dark-grey;
     border: 1px solid $dark-grey;
+    background: white;
   }
-  &:hover, &:focus, &:active{
+  &:disabled{
+    background: white;
+    opacity:.5;
+  }
+  &:hover,
+  &:focus,
+  &:active{
     text-decoration: none;
     color: white;
     background: $orange;
