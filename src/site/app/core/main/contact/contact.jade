@@ -1,0 +1,23 @@
+#contact
+  .modal-header
+    .logo-h
+    a.close(ng-click='contact.close()')
+      i.fa.fa-close
+  .modal-body
+    .row
+      h2.text-center
+        | Contacto
+      .col-sm-12
+        form(ng-submit='contact.submit()')
+          .form-group
+            label
+              | Usuario
+            input.form-control(type='text', ng-model='contact.name')
+          .form-group
+            label
+              | Contraseña
+            input.form-control(type='password', ng-model='contact.user.password')
+          .col-sm-12
+            input.submit.ceterisbtn.dark(type='submit', value='Ingresar', ng-disabled='contact.loading')
+          .col-sm-12
+          i.fa.fa-refresh.fa-spin(ng-if='contact.loading')

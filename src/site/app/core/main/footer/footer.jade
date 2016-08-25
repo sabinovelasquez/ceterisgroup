@@ -14,16 +14,16 @@ footer#footer
         h4 Clientes
         ul
           li
-            a(href='mailto:info@ceterisgroup.cl') Acceso a cuenta
+            a(ng-click='footer.login()') Acceso a cuenta
           li 
-            a(href='mailto:info@ceterisgroup.cl') Registro
+            a(ng-click='footer.contactForm()') Registro
       .col-xs-6.col-sm-3
         h4 Servicio al Cliente
         ul
           li 
-            a(href='mailto:info@ceterisgroup.cl') Ayuda comercial
+            a(ng-click='footer.contactForm()') Ayuda comercial
           li 
-            a(href='mailto:info@ceterisgroup.cl') Contacto
+            a(ng-click='footer.contactForm()') Contacto
       .col-xs-6.col-sm-3
         
     .text-bottom
