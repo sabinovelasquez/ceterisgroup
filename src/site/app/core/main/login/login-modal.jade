@@ -1,12 +1,12 @@
 #login
   .modal-header
     .logo-h
+    h2.text-center
+      | Acceda a su Cuenta
     a.close(ng-click='modal.close()')
       i.fa.fa-close
   .modal-body
     .row
-      h2.text-center
-        | Acceda a su Cuenta
       .col-sm-12
         form(ng-submit='modal.submit()', ng-show='modal.auth.verified==null')
           .form-group

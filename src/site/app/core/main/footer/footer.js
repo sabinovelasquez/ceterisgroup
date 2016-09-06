@@ -6,8 +6,8 @@ export default ngModule => {
       template: require('./footer.jade'),
       controllerAs: 'footer',
       controller: function mainHeaderCtrl() {
-        this.contactForm = () => {
-          ContactAPIService.openForm();
+        this.contactForm = (activate) => {
+          ContactAPIService.openForm(activate);
         };
         this.login = () => {
           LoginAPIService.openLogin();

@@ -4,6 +4,13 @@
 #login{
   .modal-header{
     background: $orange;
+    h2{
+      font-weight: 100;
+      height: 0;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
     .logo-h{
       position: absolute;
       top: 8px;

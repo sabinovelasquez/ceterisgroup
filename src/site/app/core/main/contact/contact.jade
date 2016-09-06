@@ -1,13 +1,15 @@
 #contact
   .modal-header
     .logo-h
+    h2.text-center
+      span(ng-if='!contact.activate')
+        | Contacto
+      span(ng-if='contact.activate')
+        | Activa tu código de usuario
     a.close(ng-click='contact.close()')
       i.fa.fa-close
   .modal-body
     .row
-      h2.text-center
-        | Contacto
-      
       form(name='contactForm', ng-submit='contact.submit(contactForm.$valid)')
         .col-sm-6
           .form-group
@@ -28,17 +30,39 @@
             .input-group
               span.input-group-addon +56 9
               input.form-control(type='number', ng-model='contact.data.phone', required)
-        .col-sm-6
+        .col-sm-6(ng-if='!contact.activate')
           .form-group
             label
-              | Asunto (Opcional)
-            input.form-control(type='text', ng-model='contact.data.subject')
-        .col-sm-6
+              | Asunto
+            select.form-control(ng-model='contact.data.subject', ng-options='option for option in contact.selectOpt track by $index')
+        .col-sm-6(ng-if='!contact.activate')
           .form-group
             label
               | Mensaje
             textarea.form-control(rows='8', ng-model='contact.data.body', required)
-        .col-sm-12
+        .col-sm-6(ng-if='contact.activate')
+          .form-group
+            label
+              | Usuario
+            input.form-control(type='text', ng-model='contact.data.username', required)
+        .col-sm-6(ng-if='contact.activate')
+          .form-group
+            label
+              | Seleccione Comuna
+            select.form-control(ng-model='contact.data.comuna', ng-options='comuna for comuna in contact.selectCom track by $index')
+        .col-sm-12(ng-if='contact.activate')
+          input.submit.ceterisbtn.dark(type='submit', value='Generar clave', ng-disabled='contact.loading')
+        .col-sm-12(ng-if='!contact.activate')
           input.submit.ceterisbtn.dark(type='submit', value='Enviar', ng-disabled='contact.loading')
         .col-sm-12
         i.fa.fa-refresh.fa-spin(ng-if='contact.loading')
+  .modal-footer
+    .col-sm-12
+      p.text-center
+        small
+          i.fa.fa-envelope   
+          a(href='mailto:info@ceterisgroup.cl')
+            |   info@ceterisgroup.cl
+          |   -   
+          i.fa.fa-phone   
+          |   (+56) 2 29045797
