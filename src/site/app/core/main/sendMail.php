@@ -2,7 +2,7 @@
 $post_date = file_get_contents("php://input");
 $data = json_decode($post_date);
 
-$to= 'sabinovelasquez@gmail.com';
+$to= 'info@ceterisgroup.cl';
 $subject= 'Formulario Ceteris';
 $body= $data->body. "\r\n";
 $body.= 'Teléfono: '.$data->phone. "\r\n";
