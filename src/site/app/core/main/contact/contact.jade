@@ -10,7 +10,14 @@
       i.fa.fa-close
   .modal-body
     .row
-      form(name='contactForm', ng-submit='contact.submit(contactForm.$valid)')
+      .col-sm-12
+        .alert.alert-success.text-center(ng-show='contact.sent=="sent"')
+          | El formulario ha sido enviado exitosamente, pronto nos pondremos en contacto con Usted.
+        .alert.alert-success.text-center(ng-show='contact.sent=="failed"')
+          | Ha ocurrido un error, por favor intente nuevamente.
+        p.text-center(ng-if='contact.loading')
+          i.fa.fa-refresh.fa-spin
+      form(name='contactForm', ng-submit='contact.submit(contactForm.$valid)', ng-show='!contact.sent')
         .col-sm-6
           .form-group
             label
@@ -54,8 +61,6 @@
           input.submit.ceterisbtn.dark(type='submit', value='Generar clave', ng-disabled='contact.loading')
         .col-sm-12(ng-if='!contact.activate')
           input.submit.ceterisbtn.dark(type='submit', value='Enviar', ng-disabled='contact.loading')
-        .col-sm-12
-        i.fa.fa-refresh.fa-spin(ng-if='contact.loading')
   .modal-footer
     .col-sm-12
       p.text-center

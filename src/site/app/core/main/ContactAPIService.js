@@ -20,7 +20,8 @@ export default ngModule => {
           this.submit = () => {
             this.loading = true;
             $http.post('http://ceterisgroup.cl/sendMail.php', this.data).
-            success( () => {
+            success( (data) => {
+              this.sent = data;
               this.loading = false;
             });
           };
